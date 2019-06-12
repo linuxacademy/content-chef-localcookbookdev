@@ -1,4 +1,4 @@
-#This is a copy of the config.rb used in this lab.
+#This is a copy of the config.rb used in this lesson.
 cookbook_path ['~/chef/cookbooks']
 local_mode true
 if File.basename($PROGRAM_NAME).eql?('chef') && ARGV[0].eql?('generate')
