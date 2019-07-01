@@ -1,0 +1,38 @@
+---
+driver:
+  name: docker
+  privileged: true
+  use_sudo: false
+provisioner:
+  name: chef_zero
+  product_name: "chef"
+  product_version: "13.8.5"
+
+verifier: inspec 
+
+platforms:  
+  - name: centos-7.3
+  - name: centos-6.8
+
+suites:
+  - name: dev
+    driver:
+      run_command: /usr/sbin/init
+    run_list:
+      - recipe[la_java::default]
+    attributes: {'java': { 'jdk_version': '7' } }
+    driver_config:
+      forwards:
+        - 8000:80
+    excludes: centos-6.8
+  - name: prod
+    driver:
+      run_command: /sbin/init
+    run_list:
+      - recipe[la_java::default]
+    attributes: { 'java': { 'jdk_version': '6' } } 
+    driver_config:
+      forward:
+        - 8001:80
+    includes: centos-6.8
+
