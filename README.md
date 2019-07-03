@@ -7,4 +7,8 @@ Author EMail:  kevin.james@linuxacademy.com
 
 This Repository contains content relating to this course.
 
+The course this content relates to is
+Chef - The Local Cookbook Development Badge
+https://linuxacademy.com/cp/modules/view/id/379
+
 
