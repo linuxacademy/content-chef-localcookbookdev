@@ -16,3 +16,9 @@ end
 describe port(80), :skip do
   it { should_not be_listening }
 end
+['net-tools','httpd'].each do |pkg|
+  describe package(pkg) do
+    it { should be_installed }
+  end
+end
+
