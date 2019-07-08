@@ -1,0 +1,7 @@
+DEPENDENCIES
+  la_good
+    path: .
+    metadata: true
+
+GRAPH
+  la_good (0.1.0)

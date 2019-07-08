@@ -1,0 +1,7 @@
+DEPENDENCIES
+  la_bad
+    path: .
+    metadata: true
+
+GRAPH
+  la_bad (0.1.0)

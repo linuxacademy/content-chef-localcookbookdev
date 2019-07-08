@@ -1,0 +1,7 @@
+DEPENDENCIES
+  la_troubleshooting
+    path: .
+    metadata: true
+
+GRAPH
+  la_troubleshooting (0.1.0)
